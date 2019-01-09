@@ -21,6 +21,13 @@ db
 
 const app = express();
 
+//middleware for handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+//set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function(req, res) {
   res.send('index');
 });

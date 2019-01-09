@@ -7,19 +7,20 @@ const Gig = require('../models/Gig');
 router.get('/', (req, res) =>
   Gig.findAll() //method in SQL that returns a promise
     .then(gigs => {
-      console.log(gigs);
-      res.sendStatus(200);
+      res.render('gigs', {
+        gigs:gigs
+      });
     })
     .catch(err => console.log(err)));
 
 //add a gig
 router.get('/add', (req, res) => {
   const data = {
-    title: 'looking for a react developer',
-    technologies: 'react, javascript, html, css',
-    budget: '£4000',
-    description: 'this will be a 3 month contract',
-    contact_email: 'jade@gmail.com'
+    title: 'make a wordpress website',
+    technologies: 'wordpress, php, html, css',
+    budget: '£1000',
+    description: 'this is a role for intermediates',
+    contact_email: 'alvaaaa@gmail.com'
   }
 
   let { title, technologies, budget, description, contact_email } = data;
