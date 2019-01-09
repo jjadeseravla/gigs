@@ -28,9 +28,12 @@ app.set('view engine', 'handlebars');
 //set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res) {
-  res.send('index');
-});
+// app.get('/', function(req, res) {
+//   res.send('index');
+// });
+
+//index route
+app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
 // Gig routes
 app.use('/gigs', require('./routes/gigs'));

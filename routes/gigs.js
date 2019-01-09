@@ -13,8 +13,11 @@ router.get('/', (req, res) =>
     })
     .catch(err => console.log(err)));
 
+//display add gig form
+router.get('/add', (res, res) => res.render('add'));
+
 //add a gig
-router.get('/add', (req, res) => {
+router.post('/add', (req, res) => {
   const data = {
     title: 'make a wordpress website',
     technologies: 'wordpress, php, html, css',
