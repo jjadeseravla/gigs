@@ -17,5 +17,6 @@ To see displayed data on PSQL, create a DB on the console or download PgAdmin to
 - HTML + CSS with Handlebars
 
 ## How would I Improve this project
+- I would include some TESTS!!!
 - I would pull in real data for contracting roles from an API that would display the current roles available and remove any roles which had been filled.
 - I would include a field for location and make sure people could search for gigs by location and particular distances from where they are based.
